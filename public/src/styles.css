@@ -240,7 +240,7 @@ input[type="submit"]:hover {
     color: white;
     font-size: 30px;
     margin: 20px;
-    align-self: flex-end;
+    align-self:flex-start;
   }
 
   ul {
@@ -255,11 +255,9 @@ input[type="submit"]:hover {
 
   nav {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction:row;
     background-color: #2b2c38;
   }
 
-  .logo {
-    display: none;
-  }
+ 
 }
