@@ -21,7 +21,7 @@ app.use(express.urlencoded())
 let port = process.env.PORT || 3001
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + `public/index.html`)
+    res.sendFile(__dirname + `/public/index.html`)
 })
 
 app.post("/form-submit", async (req, res) => {
