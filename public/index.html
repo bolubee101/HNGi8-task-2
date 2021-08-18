@@ -98,8 +98,8 @@
       </section>
       <footer id="contact-me">
           <h2>Contact me</h2>
-          <div class="container">
-            <form class="form" action="action_page.php">
+          <div id= "form-container"class="container">
+            <form class="form" action="/form-submit" method="post">
           
               <span class="label"><label for="fname">First Name</label></span>
               <input type="text" id="fname" name="firstname" placeholder="Your name..." required>
@@ -108,7 +108,7 @@
               <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
 
               <span class="label"><label for="email">email</label></span>
-              <input type="text" id="lname" name="lastname" placeholder="Your email address..." required>
+              <input type="text" id="email" name="email" placeholder="Your email address..." required>
           
               <span class="label"><label for="subject">Subject</label></span>
               <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px" required></textarea>
@@ -119,5 +119,25 @@
           </div>
       </footer>
     <script src="src/app.js"></script>
+    <script>
+      document.body.addEventListener("submit", async function (event) {
+  event.preventDefault();
+  const form = event.target
+
+  // casting to any here to satisfy tsc
+  // sending body as x-www-form-url-encoded
+  const result = await fetch(form.action, {
+    method: form.method,
+    body: new URLSearchParams([...(new FormData(form))]),
+  })
+    .then((response) => {
+      if(response.status==201){
+        document.getElementById("form-container").innerHTML="Your message has been recorded"
+      }
+      response.json()
+    }).then((json) => json)
+    .catch((error) => console.log(error));
+});
+    </script>
   </body>
 </html>
