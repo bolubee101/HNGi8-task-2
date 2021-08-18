@@ -18,7 +18,7 @@ const transporter = nodemailer.createTransport({
 const sendMail = ( 
   to='youremail@gmail.com', 
   subject="For you", 
-  text="You, yes you, you are the definition of amazing. Everything is going to be all right",
+  text="You, yes you, even in the darest night, you are a knight that shines ever so brightly",
   bcc=null
 ) => {
   try {
