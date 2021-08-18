@@ -9,7 +9,6 @@ const senderObject = {
   user: process.env.AUTH_EMAIL || 'youremail@gmail.com',
   pass: process.env.AUTH_PASS || 'yourpassword'
 }
-console.log(senderObject)
 const transporter = nodemailer.createTransport({
   service,
   auth: senderObject,
