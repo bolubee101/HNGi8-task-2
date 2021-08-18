@@ -4,7 +4,7 @@
   "description": "My hng tas",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node resume/app.js"
   },
   "author": "Lord Bee",
   "license": "ISC",
