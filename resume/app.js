@@ -29,7 +29,7 @@ app.post("/form-submit", async (req, res) => {
     let sub = new submission(req.body);
     try {
         await sub.save();
-        emailer(req.body.email, "HNG backend task 2", `You filled this out in your form:  "${req.body.subject}"`)
+        // emailer(req.body.email, "HNG backend task 2", `You filled this out in your form:  "${req.body.subject}"`)
         res.status(201).json({
             status: "success"
         })

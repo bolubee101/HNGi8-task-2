@@ -99,6 +99,7 @@ p {
 .logo {
   height: 80px;
   margin: 30px;
+  border-radius: 50%;
 }
 .social {
   margin: 20px;
