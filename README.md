@@ -1,3 +1,3 @@
 # HNGi8-task-2
 
-deployed to https://hng-bee-resume.herokuapp.com/
+deployed to https://lordbee.herokuapp.com/
